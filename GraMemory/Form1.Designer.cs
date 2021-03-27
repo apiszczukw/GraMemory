@@ -35,7 +35,7 @@ namespace GraMemory
             this.labelOpisPunkty = new System.Windows.Forms.Label();
             this.labelWartoscPunkty = new System.Windows.Forms.Label();
             this.labelStartInfo = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelKart = new System.Windows.Forms.Panel();
             this.timerCzasGry = new System.Windows.Forms.Timer(this.components);
             this.timerCzasPodgladu = new System.Windows.Forms.Timer(this.components);
             this.timerZakrywacz = new System.Windows.Forms.Timer(this.components);
@@ -91,12 +91,13 @@ namespace GraMemory
             this.labelStartInfo.TabIndex = 0;
             this.labelStartInfo.Text = "Początek gry za 5";
             // 
-            // panel1
+            // panelKart
             // 
-            this.panel1.Location = new System.Drawing.Point(16, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 228);
-            this.panel1.TabIndex = 1;
+            this.panelKart.BackColor = System.Drawing.Color.Silver;
+            this.panelKart.Location = new System.Drawing.Point(16, 49);
+            this.panelKart.Name = "panelKart";
+            this.panelKart.Size = new System.Drawing.Size(514, 228);
+            this.panelKart.TabIndex = 1;
             // 
             // timerCzasGry
             // 
@@ -115,7 +116,7 @@ namespace GraMemory
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 457);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelKart);
             this.Controls.Add(this.labelWartoscPunkty);
             this.Controls.Add(this.labelWartoscCzas);
             this.Controls.Add(this.labelStartInfo);
@@ -136,7 +137,7 @@ namespace GraMemory
         private System.Windows.Forms.Label labelOpisPunkty;
         private System.Windows.Forms.Label labelWartoscPunkty;
         private System.Windows.Forms.Label labelStartInfo;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelKart;
         private System.Windows.Forms.Timer timerCzasGry;
         private System.Windows.Forms.Timer timerCzasPodgladu;
         private System.Windows.Forms.Timer timerZakrywacz;
