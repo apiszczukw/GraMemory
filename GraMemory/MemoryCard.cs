@@ -14,11 +14,11 @@ namespace GraMemory
         public Image Front;
         public Image Back;
 
-        public MemoryCard(Guid iD, Image front, Image back)
+        public MemoryCard(Guid iD, string front, string back)
         {
             ID = iD;
-            Front = front;
-            Back = back;
+            Front = Image.FromFile(front);
+            Back = Image.FromFile(back);
             BackgroundImageLayout = ImageLayout.Stretch;
         }
 

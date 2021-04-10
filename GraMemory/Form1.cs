@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,8 +20,20 @@ namespace GraMemory
             InitializeComponent();
 
             UstawKontrolki();
+            UstawKarty();
         }
 
+        private void UstawKarty()
+        {
+            string[] cardsFront = Directory.GetFiles(ustawienia.FolderObrazki);
+            ustawienia.MaxPunkty = cardsFront.Length;
+
+            var cards = new List<MemoryCard>();
+            foreach (var item in cardsFront)
+            {
+                MemoryCard karta = new MemoryCard(Guid.NewGuid(), item, ustawienia.PlikLogo);
+            }
+        }
 
         void UstawKontrolki()
         {
