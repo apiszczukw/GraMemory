@@ -31,7 +31,32 @@ namespace GraMemory
             var cards = new List<MemoryCard>();
             foreach (var item in cardsFront)
             {
-                MemoryCard karta = new MemoryCard(Guid.NewGuid(), item, ustawienia.PlikLogo);
+                var id = Guid.NewGuid(); 
+                MemoryCard karta = new MemoryCard(id, item, ustawienia.PlikLogo);
+                MemoryCard karta2 = new MemoryCard(id, item, ustawienia.PlikLogo);
+                cards.Add(karta);
+                cards.Add(karta2);
+            }
+
+            Random random = new Random();
+
+            for(int i = 0; i < ustawienia.Wiersze; i++)
+            {
+                for(int j = 0; j < ustawienia.Kolumny; j++)
+                {
+                    var wylosowanyIndex = random.Next(0, cards.Count);
+                    var wylosowanaKarta = cards[wylosowanyIndex];
+
+                    wylosowanaKarta.Height = ustawienia.Bok;
+                    wylosowanaKarta.Width = ustawienia.Bok;
+                    int margines = 2;
+                    wylosowanaKarta.Location = new Point((j * ustawienia.Bok) + (margines * j), (i * ustawienia.Bok) + (margines * i));
+
+                    wylosowanaKarta.Odkryj();
+                    panelKart.Controls.Add(wylosowanaKarta);
+
+                    cards.Remove(wylosowanaKarta);
+                }
             }
         }
 
