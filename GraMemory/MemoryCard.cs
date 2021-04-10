@@ -21,5 +21,17 @@ namespace GraMemory
             Back = back;
             BackgroundImageLayout = ImageLayout.Stretch;
         }
+
+        public void Zakryj()
+        {
+            BackgroundImage = Back;
+            Enabled = true;
+        }
+
+        public void Odkryj()
+        {
+            BackgroundImage = Front;
+            Enabled = false;
+        }
     }
 }
