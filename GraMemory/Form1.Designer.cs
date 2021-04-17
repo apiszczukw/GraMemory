@@ -44,17 +44,17 @@ namespace GraMemory
             // labelOpisCzas
             // 
             this.labelOpisCzas.AutoSize = true;
-            this.labelOpisCzas.Font = new System.Drawing.Font("Oxygen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOpisCzas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOpisCzas.Location = new System.Drawing.Point(13, 13);
             this.labelOpisCzas.Name = "labelOpisCzas";
-            this.labelOpisCzas.Size = new System.Drawing.Size(38, 16);
+            this.labelOpisCzas.Size = new System.Drawing.Size(41, 16);
             this.labelOpisCzas.TabIndex = 0;
             this.labelOpisCzas.Text = "Czas:";
             // 
             // labelWartoscCzas
             // 
             this.labelWartoscCzas.AutoSize = true;
-            this.labelWartoscCzas.Font = new System.Drawing.Font("Oxygen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWartoscCzas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWartoscCzas.Location = new System.Drawing.Point(57, 13);
             this.labelWartoscCzas.Name = "labelWartoscCzas";
             this.labelWartoscCzas.Size = new System.Drawing.Size(24, 16);
@@ -64,7 +64,7 @@ namespace GraMemory
             // labelOpisPunkty
             // 
             this.labelOpisPunkty.AutoSize = true;
-            this.labelOpisPunkty.Font = new System.Drawing.Font("Oxygen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOpisPunkty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOpisPunkty.Location = new System.Drawing.Point(109, 13);
             this.labelOpisPunkty.Name = "labelOpisPunkty";
             this.labelOpisPunkty.Size = new System.Drawing.Size(51, 16);
@@ -74,7 +74,7 @@ namespace GraMemory
             // labelWartoscPunkty
             // 
             this.labelWartoscPunkty.AutoSize = true;
-            this.labelWartoscPunkty.Font = new System.Drawing.Font("Oxygen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWartoscPunkty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWartoscPunkty.Location = new System.Drawing.Point(166, 13);
             this.labelWartoscPunkty.Name = "labelWartoscPunkty";
             this.labelWartoscPunkty.Size = new System.Drawing.Size(16, 16);
@@ -84,10 +84,10 @@ namespace GraMemory
             // labelStartInfo
             // 
             this.labelStartInfo.AutoSize = true;
-            this.labelStartInfo.Font = new System.Drawing.Font("Oxygen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartInfo.Location = new System.Drawing.Point(357, 13);
             this.labelStartInfo.Name = "labelStartInfo";
-            this.labelStartInfo.Size = new System.Drawing.Size(109, 16);
+            this.labelStartInfo.Size = new System.Drawing.Size(113, 16);
             this.labelStartInfo.TabIndex = 0;
             this.labelStartInfo.Text = "Początek gry za 5";
             // 
@@ -102,14 +102,17 @@ namespace GraMemory
             // timerCzasGry
             // 
             this.timerCzasGry.Interval = 1000;
+            this.timerCzasGry.Tick += new System.EventHandler(this.timerCzasGry_Tick);
             // 
             // timerCzasPodgladu
             // 
             this.timerCzasPodgladu.Interval = 1000;
+            this.timerCzasPodgladu.Tick += new System.EventHandler(this.timerCzasPodgladu_Tick);
             // 
             // timerZakrywacz
             // 
             this.timerZakrywacz.Interval = 1000;
+            this.timerZakrywacz.Tick += new System.EventHandler(this.timerZakrywacz_Tick);
             // 
             // Form1
             // 

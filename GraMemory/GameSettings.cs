@@ -24,7 +24,7 @@ namespace GraMemory
             UstawienieStartowe();
         }
 
-        private void UstawienieStartowe()
+        public void UstawienieStartowe()
         {
             CzasPodgladu = 5;
             CzasGry = 60;

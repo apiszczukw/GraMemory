@@ -33,5 +33,11 @@ namespace GraMemory
             BackgroundImage = Front;
             Enabled = false;
         }
+
+        public void Usun()
+        {
+            BackgroundImage = null;
+            Enabled = false;
+        }
     }
 }
